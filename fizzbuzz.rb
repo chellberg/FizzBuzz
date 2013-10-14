@@ -1,31 +1,16 @@
-# FizzBuzz interview question
-class FizzBuzz
+@output = []  
 
-   #initilize empty array
-
-  def five_three #fill array with FizzBuzz
-  @output = []  
-   (1..100).each do |i|
-      if i % 3 == 0 and i % 5 == 0
-        @output[i] = "FizzBuzz"
-      elsif i % 3 == 0 
-        @output[i] = "Fizz"
-      elsif i % 5 == 0
-        @output[i] = "Buzz"
-      else 
-        @output[i] = i
-      end
-    end
-  end
-
-  def printer()
-    puts @output
-  end
- 
- 
+(1..100).each do |i|
+  @output[i] = if i % 3 == 0 and i % 5 == 0
+                 "FizzBuzz"
+               elsif i % 3 == 0
+                 "Fizz"
+               elsif i % 5 == 0
+                 "Buzz"
+               else 
+                 i
+               end
 end
 
-a = FizzBuzz.new
-a.five_three
-a.printer
+puts @output
 
